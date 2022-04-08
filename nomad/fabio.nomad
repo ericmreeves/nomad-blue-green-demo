@@ -15,9 +15,9 @@ job "fabio" {
     task "fabio" {
       driver = "docker"
       config {
-        image = "fabiolb/fabio"
+        image        = "fabiolb/fabio"
         network_mode = "host"
-        ports = ["http","admin"]
+        ports        = ["http","admin"]
       }
 
       resources {

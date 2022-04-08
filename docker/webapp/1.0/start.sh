@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo '--- Starting Simple HTTP Server'
+echo '<html><head><style>body {background-color: #98C1D9;}</style><title>Web Application 1.0</title></head><body><p style="font-family: Arial;font-size: 24px;font-weight: bold">Web Application 1.0 ('$(hostname)')</p></body></html>' > /www/index.html
+
+python3 -m http.server 8080

@@ -4,11 +4,11 @@ job "webapp" {
   type = "service"
 
   update {
-    max_parallel = 1
-    canary = 1
+    max_parallel     = 1
+    canary           = 1
     min_healthy_time = "10s"
     healthy_deadline = "3m"
-    auto_revert = true
+    auto_revert      = true
     auto_promote     = false
   }
 
@@ -20,8 +20,8 @@ job "webapp" {
       interval = "5m"
       # The "delay" parameter specifies the duration to wait before restarting
       # a task after it has failed.
-      delay = "30s"
-      mode = "delay"
+      delay    = "30s"
+      mode     = "delay"
     }
 
     network {
@@ -45,7 +45,7 @@ job "webapp" {
     task "webapp" {
       driver = "docker"
       config {
-        image = "ericreeves/webapp:1.0"
+        image = "ericreeves/webapp:2.0"
         ports = ["http"]
       }
 
